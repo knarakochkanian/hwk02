@@ -1,0 +1,159 @@
+1.
+function str (a, b) {
+  let i=0;
+  let counter =0;
+  while (i < a.lenght-1) {
+    if (b===a[i++]) {
+      counter++;
+    }
+  } return counter;
+} console.log (str (5, 2563))
+
+2. function reverse (num) {
+    let newNum ='';
+    while (num!==0){
+      const lastDigit=num%10;
+      newNum +=lastDigit;
+      num = (num - lastDigit)/10;
+      } return Number (newNum)
+  }
+  console.log (reverse(895796))
+3.
+function findDiffBetweenMinandMax (num) {
+  const strNum ="" + num;
+  let min =9;
+  let max =0;
+  for (let i=0; i < strNum.length; i++) {
+    const currentDigit =+strNum[i];
+    if (currentDigit > max) max = currentDigit;
+    if (currentDigit < min) min = currentDigit;
+  } return max-min;
+}
+console.log (findDiffBetweenMinandMax (152))
+4.
+function chekPrimeNum(num) {
+  if (num===1) {
+    return ('no');
+  }
+  else if(num === 2) {
+    return ('yes');
+  } else { 
+    for (let x = 2; x < num; x++)
+    {
+      if (num % x === 0)
+      {
+        return ('no');
+      }
+    }
+    return ('yes');  
+  }
+}
+console.log(chekPrimeNum(401));
+5.
+let theGame = prompt ("Right rock, paper or scissors!")
+  if  (theGame !== 'rock' && theGame !== 'paper' && theGame !== 'scissors') {
+    alert (`Invalid input, enter correct value.`)}
+    else function Game(a, b) { 
+        if (a === b) {
+          alert (`Draw! Enter new values`) 
+        }
+        if(a === "rock") {
+         if(b === "scissors") {
+            return('1nd player wins!');
+        }
+            else {
+                return('2nd player wins!');
+            }
+        }
+    if(a === "paper") {
+        if(b === "rock") {
+            return('1nd player wins!');
+        }
+        else {
+            return('2nd player wins!');
+        }
+    }
+    if(a === "scissors") {
+        if(b === "paper") {
+            return('1nd player wins!');
+        }
+        else {
+            return('2nd player wins!');
+        }
+    }
+
+};
+console.log(Game(rock, paper));
+
+6.
+function fibonacciNumber (num) {
+  if (num === 0)
+       return 0;
+  if (num === 1 || num === 2)
+       return 1;
+  let  a = 1, b = 1, current; 
+  for(let i = 3; i <= num; i++) {
+      current = a + b;
+      a = b;
+      b = current;
+  }
+  return current;
+}
+console.log(fibonacciNumber(20))
+
+7.
+function fibonacciNumber (num) {
+  let  a = 1, b = 1, current; 
+  for(let i = 3; i <= num; i++) {
+      current = a + b;
+      a = b;
+      b = current;
+  return (i);
+  }
+}
+console.log(fibonacciNumber(7))
+
+ 8. 
+ function calcSequence (n) {
+  for (let i= 1; i <= n; i++) {  
+     result = 1-1/3+1/5-1/7+1/9+(-1)*1/i; 
+      } return result
+} console.log (calcSequence (5))
+
+9. 
+function comb (n) {
+  for(let i=0; i< 10; i++) { 
+    for(let j=0; j< 10; j++) { 
+      return "i","j"," "; 
+       }
+  }
+ }
+  console.log (comb ("/n")); 
+  10.
+
+  function productNum (number) {
+    let figures = "" + number
+    let product = 1;
+      for (let i = 0; i < figures.length; i++) 
+       product *= +figures[i]
+        return product
+}
+
+
+
+   function sumNum (number) {
+    let figures = "" + number
+    let sum = 0
+      for (let i = 0; i < figures.length; i++) 
+       sum += +figures[i]
+        return sum
+}
+
+
+if (productNum%sumNum!=0) {
+  const quotient = productNum/sumNum;
+  console.log (`quotient is ${quotient}`)
+} else { 
+  const remainder = productNum%sumNum;
+  console.log (`remainder is ${remainder}`)
+}
